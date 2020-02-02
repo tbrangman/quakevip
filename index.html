@@ -4,8 +4,14 @@
 	<meta name="viewport" content="width=device-width, initial-scale=1">
 	<link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bulma@0.8.0/css/bulma.min.css">
 	<link rel="stylesheet" href="main.css">
+	<script src="https://js.stripe.com/v3/"></script>
 </head>
 <body>
+
+<!-- Load Stripe.js on your website. -->
+<script src="https://js.stripe.com/v3"></script>
+
+<div id="error-message"></div>
 
 <section id="main-page-section" class="hero is-fullheight">
 	<nav class="quake-nav navbar" role="navigation" aria-label="main navigation">
@@ -13,31 +19,22 @@
 	    <a class="quake-logo" href="https://quake.vip">
 	      <img src="images/quake-logo-transparent.png">
 	    </a>
-
-	    <a role="button" class="navbar-burger burger" aria-label="menu" aria-expanded="false" data-target="navbarBasicExample">
-	      <span aria-hidden="true"></span>
-	      <span aria-hidden="true"></span>
-	      <span aria-hidden="true"></span>
-	    </a>
 	  </div>
 
 	  <div id="navbarBasicExample" class="navbar-menu">
 	    <div class="navbar-start">
 	      <a class="primary-menu-links navbar-item">Home</a>
-	      <a class="primary-menu-links navbar-item">Features</a>
-	      <a class="primary-menu-links navbar-item">Testimonials</a>
-	      <a class="primary-menu-links navbar-item">Contact Us</a>
+	      <a href="#quake-features-section" class="primary-menu-links navbar-item">Features</a>
+	      <a href="#quake-faqs-section" class="primary-menu-links navbar-item">FAQs</a>
+	      <a href="#quake-testimonials-section" class="primary-menu-links navbar-item">Testimonials</a>
+	      <a href="#quake-faqs-section" class="primary-menu-links navbar-item">Contact Us</a>
 	    </div>
 
 	    <div class="navbar-end">
 	      <div class="navbar-item">
-	        <div class="buttons">
-	          <a class="main-menu-btn buy-now-btn button is-primary">
-	            <strong>Buy Now</strong>
-	          </a>
-	          <a class="main-menu-btn dashboard-btn button is-light is-inverted">
-	            Dashboard
-	          </a>
+	        <div id="dashboard-btn-container" class="buttons">
+	        	<a class="main-menu-btn dashboard-btn button is-light is-inverted is-static">Dashboard</a>
+	        	<span class="coming-soon-alert tag is-rounded is-warning">Coming Soon</span>
 	        </div>
 	      </div>
 	    </div>
@@ -53,15 +50,20 @@
 		    Your favorite cook group's, favorite cook group.
 		  </h2>
 		  <div>
-		  	<a class="main-menu-btn buy-now-btn button is-light" href="#">Sold out - $25/m &#x1f911;</a>
-		  	<a class="main-menu-btn learn-more-btn button is-light is-inverted" href="#">Learn More</a>
+		  	<button class="main-menu-btn buy-now-btn button is-primary" id="checkout-button-plan_Gf6OB7ZjVC4WTb" role="link"><strong>Become a member - $25/m</strong></button>
+		  	<button class="main-menu-btn learn-more-btn button is-light is-inverted" id="checkout-button-sku_Gf6NV6vrDFumGk" role="link">Become a VIP - $250</button>
 		  </div>
 		  <p class="purchase-terms">By purchasing you agree to our terms and conditions summarised in the footer of our website.</p>
 		</div>
 	</div>
-</section>
 
-<section class="features-section section">
+	<div class="hero-footer arrow-container">
+		<div class="container">
+			<i data-feather="arrow-down"></i>
+		</div>
+	</div>
+</section>
+<section id="quake-features-section" class="features-section section">
     <div class="container">
       <h1 class="feature-section-title title">Features</h1>
       	<div class="columns">
@@ -101,23 +103,25 @@
 		</div>
     </div>
 </section>
-
-<section class="faqs-section section">
+<section id="quake-faqs-section" class="faqs-section section">
 	<div class="container">
 		<h1 class="faqs-section-title title">Frequently Asked Questions</h1>
 		<div class="columns">
-			<div class="column">
-				<article class="message is-dark faqs-question-container">
-				  <div class="message-header">
-				    <p>What is Quake VIP?</p>
-				  </div>
-				  <div class="message-body">
-				    Lorem ipsum dolor sit amet, consectetur adipiscing elit. <strong>Pellentesque risus mi</strong>, tempus quis placerat ut, porta nec nulla. Vestibulum rhoncus ac ex sit amet fringilla. Nullam gravida purus diam, et dictum <a>felis venenatis</a> efficitur. Aenean ac <em>eleifend lacus</em>, in mollis lectus. Donec sodales, arcu et sollicitudin porttitor, tortor urna tempor ligula, id porttitor mi magna a neque. Donec dui urna, vehicula et sem eget, facilisis sodales sem.
-				  </div>
+			<div class="column faqs-question-container">
+				<article class="message is-dark">
+				  	<div class="message-body">
+				  		<h1>Q: What is Quake VIP?</h1>
+				    	Lorem ipsum dolor sit amet, consectetur adipiscing elit. <strong>Pellentesque risus mi</strong>, tempus quis placerat ut, porta nec nulla. Vestibulum rhoncus ac ex sit amet fringilla. Nullam gravida purus diam, et dictum <a>felis venenatis</a> efficitur. Aenean ac <em>eleifend lacus</em>, in mollis lectus.
+				  	</div>
+				</article>
+				<article class="message is-success">
+				  	<div class="message-body">
+				    	Lorem ipsum dolor sit amet, consectetur adipiscing elit. <strong>Pellentesque risus mi</strong>, tempus quis placerat ut, porta nec nulla. Vestibulum rhoncus ac ex sit amet fringilla. Nullam gravida purus diam, et dictum <a>felis venenatis</a> efficitur. Aenean ac <em>eleifend lacus</em>, in mollis lectus. Donec sodales, arcu et sollicitudin porttitor, tortor urna tempor ligula, id porttitor mi magna a neque. Donec dui urna, vehicula et sem eget, facilisis sodales sem.
+				  	</div>
 				</article>
 			</div>
-			<div class="column">
-				<article class="message is-dark faqs-question-container">
+			<div class="column faqs-question-container">
+				<article class="message is-dark">
 				  <div class="message-header">
 				    <p>Are there any lifetime memberships?</p>
 				  </div>
@@ -128,8 +132,8 @@
 			</div>
 		</div>
 		<div class="columns">
-			<div class="column">
-				<article class="message is-dark faqs-question-container">
+			<div class="column faqs-question-container">
+				<article class="message is-dark">
 				  <div class="message-header">
 				    <p>When do you restock?</p>
 				  </div>
@@ -138,8 +142,8 @@
 				  </div>
 				</article>
 			</div>
-			<div class="column">
-				<article class="message is-dark faqs-question-container">
+			<div class="column faqs-question-container">
+				<article class="message is-dark">
 				  <div class="message-header">
 				    <p>Some other question</p>
 				  </div>
@@ -151,8 +155,7 @@
 		</div>
 	</div>
 </section>
-
-<section class="testimonials-section section">
+<section id="quake-testimonials-section" class="testimonials-section section">
     <div class="container">
       <h1 class="testimonials-section-title title">Member Testimonials</h1>
       	<div class="columns">
@@ -174,35 +177,83 @@
 		</div>
     </div>
 </section>
-
 <section class="recap-section section">
     <div class="container">
       <a class="get-started-btn button is-light is-medium is-link" href="#">Join the Club &#x1f911;</a>
 	</div>
 </section>
-
 <footer>
 	<div class="container">
 		<img class="footer-logo" src="images/quake-logo-transparent.png">
-		<div class="footer-link-container level">
-			<a href="">Home</a>
-			<a href="">Features</a>
-			<a href="">FAQs</a>
-			<a href="">Terms of Service</a>
-			<a href="">Privacy Policy</a>
-		</div>
 	    <p class="disclaimer">Quake is a digital product which gives the buyer access to a private Discord server. Upon purchasing you are given access for 30 days, once these 30 days have passed you will automatically be charged for another 30 days unless you cancel your subscription. You can cancel at any time via the user dashboard or by contacting us directly! We do not offer any refunds/returns due to our service being digital-based. Upon purchasing you are accepting these conditions. All information collected from the checkout process are used to verify that your order is legitimate and is used via Stripe [Our payment processor] to enable us to run a subscription-based product.</p>
 	    <p class="quake-copyright">Quake VIP &copy; 2020</p>
 	</div>
 </footer>
 
+<script>
+(function() {
+  var stripe = Stripe('pk_test_00PWX37IVRuyVsYyWsS3Yt9a005wyULurz');
+
+  var checkoutButton = document.getElementById('checkout-button-sku_Gf6NV6vrDFumGk');
+  checkoutButton.addEventListener('click', function () {
+    // When the customer clicks on the button, redirect
+    // them to Checkout.
+    stripe.redirectToCheckout({
+      items: [{sku: 'sku_Gf6NV6vrDFumGk', quantity: 1}],
+
+      // Do not rely on the redirect to the successUrl for fulfilling
+      // purchases, customers may not always reach the success_url after
+      // a successful payment.
+      // Instead use one of the strategies described in
+      // https://stripe.com/docs/payments/checkout/fulfillment
+      successUrl: window.location.protocol + '//quake.vip/success',
+      cancelUrl: window.location.protocol + '//quake.vip/canceled',
+    })
+    .then(function (result) {
+      if (result.error) {
+        // If `redirectToCheckout` fails due to a browser or network
+        // error, display the localized error message to your customer.
+        var displayError = document.getElementById('error-message');
+        displayError.textContent = result.error.message;
+      }
+    });
+  });
+})();
+</script>
+
+<script>
+(function() {
+  var stripe = Stripe('pk_test_00PWX37IVRuyVsYyWsS3Yt9a005wyULurz');
+
+  var checkoutButton = document.getElementById('checkout-button-plan_Gf6OB7ZjVC4WTb');
+  checkoutButton.addEventListener('click', function () {
+    // When the customer clicks on the button, redirect
+    // them to Checkout.
+    stripe.redirectToCheckout({
+      items: [{plan: 'plan_Gf6OB7ZjVC4WTb', quantity: 1}],
+
+      // Do not rely on the redirect to the successUrl for fulfilling
+      // purchases, customers may not always reach the success_url after
+      // a successful payment.
+      // Instead use one of the strategies described in
+      // https://stripe.com/docs/payments/checkout/fulfillment
+      successUrl: window.location.protocol + '//quake.vip/success',
+      cancelUrl: window.location.protocol + '//quake.vip/canceled',
+    })
+    .then(function (result) {
+      if (result.error) {
+        // If `redirectToCheckout` fails due to a browser or network
+        // error, display the localized error message to your customer.
+        var displayError = document.getElementById('error-message');
+        displayError.textContent = result.error.message;
+      }
+    });
+  });
+})();
+</script>
 <script src="https://unpkg.com/feather-icons"></script>
 <script>
 	feather.replace()
-</script>
-<script type="text/javascript" src="/node_modules/bulma-accordion/dist/js/bulma-accordion.min.js"></script>
-<script type="text/javascript">
-	var accordions = bulmaAccordion.attach();
 </script>
 </body>
 </html>

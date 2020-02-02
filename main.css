@@ -64,6 +64,16 @@ Quake Navbar
 	border: none;
 }
 
+#dashboard-btn-container {
+}
+
+.coming-soon-alert {
+	font-size: 8px !important;
+	position: absolute;
+	right: 0px;
+	top: 5px;
+}
+
 .hero-body {
 	text-align: center;
 }
@@ -98,6 +108,12 @@ Quake Navbar
 	margin: 0 auto;
 	color: #fff;
 	font-size: 8px;
+}
+
+.arrow-container {
+	margin: 20px 0;
+	color: #fff;
+	text-align: center;
 }
 
 /**@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@
@@ -162,6 +178,10 @@ FAQS Section
 
 .faqs-section-title {
 	color: #fff;
+}
+
+.faqs-question-container {
+	margin: 20px;
 }
 
 /**@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@
@@ -255,4 +275,17 @@ footer {
 .quake-copyright {
 	padding: 20px 0;
 	font-weight: 500;
+}
+
+/**@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@
+Media Query
+@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@*/
+@media only screen and (max-width: 600px) {
+  body {
+    background-color: lightblue;
+  }
+
+  .main-menu-btn {
+  	font-size: 12px;
+  }
 }

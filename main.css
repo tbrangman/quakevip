@@ -64,9 +64,6 @@ Quake Navbar
 	border: none;
 }
 
-#dashboard-btn-container {
-}
-
 .coming-soon-alert {
 	font-size: 8px !important;
 	position: absolute;
@@ -181,6 +178,7 @@ FAQS Section
 }
 
 .faqs-question-container {
+	text-align: left !important;
 	margin: 20px;
 }
 
@@ -251,19 +249,18 @@ footer {
 }
 
 .footer-logo {
+	display: block;
 	margin: 0 auto;
 	width: 80px;
 }
 
 .footer-link-container {
+	display: block;
 	font-weight: 500;
 	width: 35%;
 	margin: 0 auto;
 }
 
-.footer-link-container a {
-	color: #000;
-}
 
 .disclaimer {
 	margin: 0 auto;
@@ -278,6 +275,35 @@ footer {
 }
 
 /**@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@
+Success Form
+@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@*/
+.success-form {
+	text-align: center;
+	color: #fff !important;
+	width: 100%;
+}
+
+.success-form label {
+	color: #fff;
+}
+
+.success-form-description {
+	text-align: left;
+}
+
+.success-form-description h1 {
+	font-size: 50px;
+}
+
+.success-form-description h2 {
+	font-size: 20px;
+}
+
+.success-form-btn {
+	margin: 20px 0 !important;
+}
+
+/**@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@
 Media Query
 @@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@*/
 @media only screen and (max-width: 600px) {
@@ -285,7 +311,19 @@ Media Query
     background-color: lightblue;
   }
 
+  .welcome-msg {
+	font-size: 40px;
+	font-weight: 700;
+	color: #fff;
+	}
+
+	.about-us-msg {
+		color: #fff;
+		font-size: 15px;
+		font-weight: 500;
+	}
+
   .main-menu-btn {
-  	font-size: 12px;
+  	font-size: 10px;
   }
 }

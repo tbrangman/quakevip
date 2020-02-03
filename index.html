@@ -4,12 +4,10 @@
 	<meta name="viewport" content="width=device-width, initial-scale=1">
 	<link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bulma@0.8.0/css/bulma.min.css">
 	<link rel="stylesheet" href="main.css">
+	<!-- Load Stripe.js on your website. -->
 	<script src="https://js.stripe.com/v3/"></script>
 </head>
 <body>
-
-<!-- Load Stripe.js on your website. -->
-<script src="https://js.stripe.com/v3"></script>
 
 <div id="error-message"></div>
 
@@ -23,18 +21,17 @@
 
 	  <div id="navbarBasicExample" class="navbar-menu">
 	    <div class="navbar-start">
-	      <a class="primary-menu-links navbar-item">Home</a>
 	      <a href="#quake-features-section" class="primary-menu-links navbar-item">Features</a>
 	      <a href="#quake-faqs-section" class="primary-menu-links navbar-item">FAQs</a>
 	      <a href="#quake-testimonials-section" class="primary-menu-links navbar-item">Testimonials</a>
-	      <a href="#quake-faqs-section" class="primary-menu-links navbar-item">Contact Us</a>
+	      <a href="#footer" class="primary-menu-links navbar-item">Contact Us</a>
 	    </div>
 
 	    <div class="navbar-end">
 	      <div class="navbar-item">
 	        <div id="dashboard-btn-container" class="buttons">
 	        	<a class="main-menu-btn dashboard-btn button is-light is-inverted is-static">Dashboard</a>
-	        	<span class="coming-soon-alert tag is-rounded is-warning">Coming Soon</span>
+	        	<span class="coming-soon-alert tag is-rounded is-danger">Coming Soon!</span>
 	        </div>
 	      </div>
 	    </div>
@@ -50,8 +47,8 @@
 		    Your favorite cook group's, favorite cook group.
 		  </h2>
 		  <div>
-		  	<button class="main-menu-btn buy-now-btn button is-primary" id="checkout-button-plan_Gf6OB7ZjVC4WTb" role="link"><strong>Become a member - $25/m</strong></button>
-		  	<button class="main-menu-btn learn-more-btn button is-light is-inverted" id="checkout-button-sku_Gf6NV6vrDFumGk" role="link">Become a VIP - $250</button>
+		  	<button class="main-menu-btn buy-now-btn button is-primary" id="checkout-button-plan_Gf6OB7ZjVC4WTb" role="link"><strong>Become a Member - $25/m</strong></button>
+		  	<button class="main-menu-btn learn-more-btn button is-light is-inverted" id="checkout-button-sku_Gf6NV6vrDFumGk" role="link">Become a Lifetime Member - $250</button>
 		  </div>
 		  <p class="purchase-terms">By purchasing you agree to our terms and conditions summarised in the footer of our website.</p>
 		</div>
@@ -108,48 +105,19 @@
 		<h1 class="faqs-section-title title">Frequently Asked Questions</h1>
 		<div class="columns">
 			<div class="column faqs-question-container">
-				<article class="message is-dark">
+				<article class="message is-link">
 				  	<div class="message-body">
-				  		<h1>Q: What is Quake VIP?</h1>
-				    	Lorem ipsum dolor sit amet, consectetur adipiscing elit. <strong>Pellentesque risus mi</strong>, tempus quis placerat ut, porta nec nulla. Vestibulum rhoncus ac ex sit amet fringilla. Nullam gravida purus diam, et dictum <a>felis venenatis</a> efficitur. Aenean ac <em>eleifend lacus</em>, in mollis lectus.
-				  	</div>
-				</article>
-				<article class="message is-success">
-				  	<div class="message-body">
-				    	Lorem ipsum dolor sit amet, consectetur adipiscing elit. <strong>Pellentesque risus mi</strong>, tempus quis placerat ut, porta nec nulla. Vestibulum rhoncus ac ex sit amet fringilla. Nullam gravida purus diam, et dictum <a>felis venenatis</a> efficitur. Aenean ac <em>eleifend lacus</em>, in mollis lectus. Donec sodales, arcu et sollicitudin porttitor, tortor urna tempor ligula, id porttitor mi magna a neque. Donec dui urna, vehicula et sem eget, facilisis sodales sem.
+				  		<h1 class="faqs-question"><strong>Q: Do we offer lifetime memberhsip?</strong></h1>
+				    	We do offer lifetime membership, however, it will only be offered exclusively within the group through raffles. 
 				  	</div>
 				</article>
 			</div>
 			<div class="column faqs-question-container">
-				<article class="message is-dark">
-				  <div class="message-header">
-				    <p>Are there any lifetime memberships?</p>
-				  </div>
-				  <div class="message-body">
-				    Lorem ipsum dolor sit amet, consectetur adipiscing elit. <strong>Pellentesque risus mi</strong>, tempus quis placerat ut, porta nec nulla. Vestibulum rhoncus ac ex sit amet fringilla. Nullam gravida purus diam, et dictum <a>felis venenatis</a> efficitur. Aenean ac <em>eleifend lacus</em>, in mollis lectus. Donec sodales, arcu et sollicitudin porttitor, tortor urna tempor ligula, id porttitor mi magna a neque. Donec dui urna, vehicula et sem eget, facilisis sodales sem.
-				  </div>
-				</article>
-			</div>
-		</div>
-		<div class="columns">
-			<div class="column faqs-question-container">
-				<article class="message is-dark">
-				  <div class="message-header">
-				    <p>When do you restock?</p>
-				  </div>
-				  <div class="message-body">
-				    Lorem ipsum dolor sit amet, consectetur adipiscing elit. <strong>Pellentesque risus mi</strong>, tempus quis placerat ut, porta nec nulla. Vestibulum rhoncus ac ex sit amet fringilla. Nullam gravida purus diam, et dictum <a>felis venenatis</a> efficitur. Aenean ac <em>eleifend lacus</em>, in mollis lectus. Donec sodales, arcu et sollicitudin porttitor, tortor urna tempor ligula, id porttitor mi magna a neque. Donec dui urna, vehicula et sem eget, facilisis sodales sem.
-				  </div>
-				</article>
-			</div>
-			<div class="column faqs-question-container">
-				<article class="message is-dark">
-				  <div class="message-header">
-				    <p>Some other question</p>
-				  </div>
-				  <div class="message-body">
-				    Lorem ipsum dolor sit amet, consectetur adipiscing elit. <strong>Pellentesque risus mi</strong>, tempus quis placerat ut, porta nec nulla. Vestibulum rhoncus ac ex sit amet fringilla. Nullam gravida purus diam, et dictum <a>felis venenatis</a> efficitur. Aenean ac <em>eleifend lacus</em>, in mollis lectus. Donec sodales, arcu et sollicitudin porttitor, tortor urna tempor ligula, id porttitor mi magna a neque. Donec dui urna, vehicula et sem eget, facilisis sodales sem.
-				  </div>
+				<article class="message is-link">
+				  	<div class="message-body">
+				  		<h1 class="faqs-question"><strong>Q: How much is Quake?</strong></h1>
+				    	Quake regular membership will be $25/month. Quake lifetime membership is a one time cost of $250.
+				  	</div>
 				</article>
 			</div>
 		</div>
@@ -161,66 +129,47 @@
       	<div class="columns">
 		  <div class="testimonial-container column">
 		  	<img class="testimonial-photo" src="images/roblox.png">
-		    <h3 class="testimonial-name">Alexxxxx0601</h3>
+		    <h3 class="testimonial-name">Alexxxxx#0601</h3>
 		    <p>"Hey Quake! In my short time here, everything has just been spot on and extremely dope! The group is already amongst the best and I've made hundreds of dollars from selling not only shoes just a whole bunch of cooks! This group's information and predictions are always on point and I can't wait to see how they continue to improve."</p>
 		  </div>
 		  <div class="testimonial-container column">
 		  	<img class="testimonial-photo" src="images/kid-n-car.jpg">
-		    <h3 class="testimonial-name">hypekid69orsomeshit</h3>
+		    <h3 class="testimonial-name">tannereversal#0000</h3>
 		    <p>"Hey Quake, I just wanted to thank you for being the best group I've ever been apart of. I've made $900 profit in the past month from all the help and advice you've provided for the group. Any time I have a question, I always get quick responses from very knowlegable staff and members."</p>
 		  </div>
 		  <div class="testimonial-container column">
 		  	<img class="testimonial-photo" src="images/honda-car.jpg">
-		    <h3 class="testimonial-name">hypekid69orsomeshit</h3>
+		    <h3 class="testimonial-name">ericicantreadhisname#0000</h3>
 		    <p>"Hi Quake! Just dropping in to give big thanks for providing top notch info and always staying on top of every drop! This group is amazing and better than my other groups that I am currently in! So far, you guys have helped me earn more than $1200 profit! Amazing right! My other groups that I am in gets me half or even less than that."</p>
 		  </div>
 		</div>
     </div>
 </section>
 <section class="recap-section section">
-    <div class="container">
-      <a class="get-started-btn button is-light is-medium is-link" href="#">Join the Club &#x1f911;</a>
+	<div class="container">
+		<div class="columns">
+			<div class="column">
+				<button class="get-started-btn button is-success is-medium is-link" id="checkout-button-sku_Gf6NV6vrDFumGk" role="link"><strong>Become a member &#x1f911;</strong></button>
+			</div>
+			<div class="column">
+				<a href="/success.html"class="get-started-btn button is-light is-medium is-link"><strong>Verify Account &#x1f911;</strong></a>
+			</div>
+		</div>
 	</div>
 </section>
-<footer>
+<footer id="footer">
 	<div class="container">
 		<img class="footer-logo" src="images/quake-logo-transparent.png">
+		<div>
+			<a href="https://twitter.com/quakecook?ref_src=twsrc%5Etfw" class="twitter-follow-button" data-show-count="false">Follow @quakecook</a><script async src="https://platform.twitter.com/widgets.js" charset="utf-8"></script>
+		</div>
 	    <p class="disclaimer">Quake is a digital product which gives the buyer access to a private Discord server. Upon purchasing you are given access for 30 days, once these 30 days have passed you will automatically be charged for another 30 days unless you cancel your subscription. You can cancel at any time via the user dashboard or by contacting us directly! We do not offer any refunds/returns due to our service being digital-based. Upon purchasing you are accepting these conditions. All information collected from the checkout process are used to verify that your order is legitimate and is used via Stripe [Our payment processor] to enable us to run a subscription-based product.</p>
 	    <p class="quake-copyright">Quake VIP &copy; 2020</p>
 	</div>
 </footer>
 
-<script>
-(function() {
-  var stripe = Stripe('pk_test_00PWX37IVRuyVsYyWsS3Yt9a005wyULurz');
 
-  var checkoutButton = document.getElementById('checkout-button-sku_Gf6NV6vrDFumGk');
-  checkoutButton.addEventListener('click', function () {
-    // When the customer clicks on the button, redirect
-    // them to Checkout.
-    stripe.redirectToCheckout({
-      items: [{sku: 'sku_Gf6NV6vrDFumGk', quantity: 1}],
-
-      // Do not rely on the redirect to the successUrl for fulfilling
-      // purchases, customers may not always reach the success_url after
-      // a successful payment.
-      // Instead use one of the strategies described in
-      // https://stripe.com/docs/payments/checkout/fulfillment
-      successUrl: window.location.protocol + '//quake.vip/success',
-      cancelUrl: window.location.protocol + '//quake.vip/canceled',
-    })
-    .then(function (result) {
-      if (result.error) {
-        // If `redirectToCheckout` fails due to a browser or network
-        // error, display the localized error message to your customer.
-        var displayError = document.getElementById('error-message');
-        displayError.textContent = result.error.message;
-      }
-    });
-  });
-})();
-</script>
-
+<!-- QUAKE REGULAR MEMBERSHIP-->
 <script>
 (function() {
   var stripe = Stripe('pk_test_00PWX37IVRuyVsYyWsS3Yt9a005wyULurz');
@@ -237,8 +186,39 @@
       // a successful payment.
       // Instead use one of the strategies described in
       // https://stripe.com/docs/payments/checkout/fulfillment
-      successUrl: window.location.protocol + '//quake.vip/success',
-      cancelUrl: window.location.protocol + '//quake.vip/canceled',
+      successUrl: window.location.protocol + '//quake.vip/success.html',
+      cancelUrl: window.location.protocol + '//quake.vip/canceled.html',
+    })
+    .then(function (result) {
+      if (result.error) {
+        // If `redirectToCheckout` fails due to a browser or network
+        // error, display the localized error message to your customer.
+        var displayError = document.getElementById('error-message');
+        displayError.textContent = result.error.message;
+      }
+    });
+  });
+})();
+</script>
+<!-- QUAKE LIFETIME MEMBERSHIP-->
+<script>
+(function() {
+  var stripe = Stripe('pk_test_00PWX37IVRuyVsYyWsS3Yt9a005wyULurz');
+
+  var checkoutButton = document.getElementById('checkout-button-sku_Gf6NV6vrDFumGk');
+  checkoutButton.addEventListener('click', function () {
+    // When the customer clicks on the button, redirect
+    // them to Checkout.
+    stripe.redirectToCheckout({
+      items: [{sku: 'sku_Gf6NV6vrDFumGk', quantity: 1}],
+
+      // Do not rely on the redirect to the successUrl for fulfilling
+      // purchases, customers may not always reach the success_url after
+      // a successful payment.
+      // Instead use one of the strategies described in
+      // https://stripe.com/docs/payments/checkout/fulfillment
+      successUrl: window.location.protocol + '//quake.vip/success.html',
+      cancelUrl: window.location.protocol + '//quake.vip/canceled.html',
     })
     .then(function (result) {
       if (result.error) {

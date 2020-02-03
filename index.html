@@ -47,8 +47,8 @@
 		    Your favorite cook group's, favorite cook group.
 		  </h2>
 		  <div>
-		  	<button class="main-menu-btn buy-now-btn button is-primary" id="checkout-button-plan_Gf6OB7ZjVC4WTb" role="link"><strong>Become a Member - $25/m</strong></button>
-		  	<button class="main-menu-btn learn-more-btn button is-light is-inverted" id="checkout-button-sku_Gf6NV6vrDFumGk" role="link">Become a Lifetime Member - $250</button>
+		  	<button class="main-menu-btn buy-now-btn button is-primary" id="checkout-button-plan_GfDQbsGEMK8iSu" role="link"><strong>Become a Member - $25/m</strong></button>
+		  	<button class="main-menu-btn learn-more-btn button is-light is-inverted" id="checkout-button-sku_Gf6DZnB3oaOj4Y" role="link">Become a Lifetime Member - $250</button>
 		  </div>
 		  <p class="purchase-terms">By purchasing you agree to our terms and conditions summarised in the footer of our website.</p>
 		</div>
@@ -90,7 +90,7 @@
 		  <div class="featurette-container column">
 		    <i class="icon-container yellow-bg" data-feather="monitor"></i>
 		    <h3>Bot Rentals</h3>
-		    <p class="featurette-text">Don't have the best bot for an upcoming drop? Don't worry; Quake offers daily, weekly, and monthly bot rentals, ensuring our members are prepared for every release.</p>
+		    <p class="featurette-text">Don't have the best bot for an upcoming drop? Don't worry, Quake offers daily, weekly, and monthly bot rentals, ensuring our members are prepared for every release.</p>
 		  </div>
 		  <div class="featurette-container column">
 		    <i class="icon-container teal-bg" data-feather="plus"></i>
@@ -107,16 +107,16 @@
 			<div class="column faqs-question-container">
 				<article class="message is-link">
 				  	<div class="message-body">
-				  		<h1 class="faqs-question"><strong>Q: Do we offer lifetime memberhsip?</strong></h1>
-				    	We do offer lifetime membership, however, it will only be offered exclusively within the group through raffles. 
+				  		<h1 class="faqs-question"><strong>Q: What payment methods are accepted?</strong></h1>
+				  		We accept most major credit/debit card companies. Stripe is our payment processor.
 				  	</div>
 				</article>
 			</div>
 			<div class="column faqs-question-container">
 				<article class="message is-link">
 				  	<div class="message-body">
-				  		<h1 class="faqs-question"><strong>Q: How much is Quake?</strong></h1>
-				    	Quake regular membership will be $25/month. Quake lifetime membership is a one time cost of $250.
+				  		<h1 class="faqs-question"><strong>Q: How much will Quake cost?</strong></h1>
+				    	Quake regular memberships are $25/month.
 				  	</div>
 				</article>
 			</div>
@@ -149,7 +149,7 @@
 	<div class="container">
 		<div class="columns">
 			<div class="column">
-				<button class="get-started-btn button is-success is-medium is-link" id="checkout-button-sku_Gf6NV6vrDFumGk" role="link"><strong>Become a member &#x1f911;</strong></button>
+				<button class="get-started-btn button is-success is-medium is-link" id="checkout-button-plan_GfDQbsGEMK8iSu" role="link"><strong>Become a member &#x1f911;</strong></button>
 			</div>
 			<div class="column">
 				<a href="/success.html"class="get-started-btn button is-light is-medium is-link"><strong>Verify Account &#x1f911;</strong></a>
@@ -172,14 +172,14 @@
 <!-- QUAKE REGULAR MEMBERSHIP-->
 <script>
 (function() {
-  var stripe = Stripe('pk_test_00PWX37IVRuyVsYyWsS3Yt9a005wyULurz');
+  var stripe = Stripe('pk_live_PAstEQ6ZSBjA3SpsRQNf1iJn001CvXbFBj');
 
-  var checkoutButton = document.getElementById('checkout-button-plan_Gf6OB7ZjVC4WTb');
+  var checkoutButton = document.getElementById('checkout-button-plan_GfDQbsGEMK8iSu');
   checkoutButton.addEventListener('click', function () {
     // When the customer clicks on the button, redirect
     // them to Checkout.
     stripe.redirectToCheckout({
-      items: [{plan: 'plan_Gf6OB7ZjVC4WTb', quantity: 1}],
+      items: [{plan: 'plan_GfDQbsGEMK8iSu', quantity: 1}],
 
       // Do not rely on the redirect to the successUrl for fulfilling
       // purchases, customers may not always reach the success_url after
@@ -203,14 +203,14 @@
 <!-- QUAKE LIFETIME MEMBERSHIP-->
 <script>
 (function() {
-  var stripe = Stripe('pk_test_00PWX37IVRuyVsYyWsS3Yt9a005wyULurz');
+  var stripe = Stripe('pk_live_PAstEQ6ZSBjA3SpsRQNf1iJn001CvXbFBj');
 
-  var checkoutButton = document.getElementById('checkout-button-sku_Gf6NV6vrDFumGk');
+  var checkoutButton = document.getElementById('checkout-button-sku_Gf6DZnB3oaOj4Y');
   checkoutButton.addEventListener('click', function () {
     // When the customer clicks on the button, redirect
     // them to Checkout.
     stripe.redirectToCheckout({
-      items: [{sku: 'sku_Gf6NV6vrDFumGk', quantity: 1}],
+      items: [{sku: 'sku_Gf6DZnB3oaOj4Y', quantity: 1}],
 
       // Do not rely on the redirect to the successUrl for fulfilling
       // purchases, customers may not always reach the success_url after
